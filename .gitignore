@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# Environments & secrets
+.env
+.venv/
+env/
+venv/
+ENV/
+
+# Temporary files & Word lock files
+~$*
+*.tmp
+*.temp
+
+# Local databases & runtime logs
+*.sqlite
+*.sqlite3
+logs/*.sqlite

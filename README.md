@@ -1,5 +1,12 @@
 # Self-Negotiating Procurement Network
 
+[![Python](https://img.shields.io/badge/Python-3.9%20%7C%203.12%20%7C%203.14-blue.svg)](https://www.python.org/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.111.0-009688.svg)](https://fastapi.tiangolo.com/)
+[![Groq](https://img.shields.io/badge/LLM-Groq%20qwen3.8--27b-orange.svg)](https://groq.com/)
+[![LangGraph](https://img.shields.io/badge/StateGraph-LangGraph-8A2BE2.svg)](https://langchain-ai.github.io/langgraph/)
+[![MongoDB](https://img.shields.io/badge/Database-MongoDB%20Document%20Store-47A248.svg)](https://www.mongodb.com/)
+[![Streamlit](https://img.shields.io/badge/Dashboard-Streamlit-FF4B4B.svg)](https://streamlit.io/)
+
 **A 4-Agent, Horn-Clause-Audited & Logistics-Certified Autonomous Procurement Ecosystem**
 
 ---

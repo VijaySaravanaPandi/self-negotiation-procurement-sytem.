@@ -1,0 +1,39 @@
+# ─────────────────────────────────────────────────────────────
+#  config.yaml  —  Self-Negotiating Procurement Network
+#  Edit freely; no code changes needed to alter constraints.
+# ─────────────────────────────────────────────────────────────
+
+negotiation:
+  round_limit: 6            # Max rounds before FAILED verdict
+
+# ── Factory Agent constraints (hard, non-negotiable) ──────────
+factory:
+  item: "steel_rods"
+  min_qty: 500              # units
+  max_price: 85.00          # USD per unit
+  deadline: 7               # days (lead time must be ≤ this)
+
+# ── Supplier Agent initial private state ──────────────────────
+supplier:
+  inventory: 800            # units available (private)
+  cost_floor: 60.00         # USD per unit — minimum profitable price (private)
+  initial_pricing_pressure: "low"   # low | medium | high
+
+# ── Price-shock configuration ────────────────────────────────
+shock:
+  enabled: true
+  trigger_round: 3          # Round at which shock fires (1-indexed)
+  cost_floor_multiplier: 1.25   # e.g. 1.25 → cost_floor rises 25 %
+  pressure_after_shock: "high"  # pricing_pressure after shock event
+
+# ── Groq LLM configuration ───────────────────────────────────
+groq:
+  model: "qwen/qwen3.8-27b"
+  temperature: 0.4
+  max_tokens: 512
+
+# ── Agent ports ───────────────────────────────────────────────
+ports:
+  factory: 8001
+  supplier: 8002
+  auditor: 8003
